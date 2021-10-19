@@ -1,8 +1,9 @@
-import React from "react"
+import React from "react";
+import Chrono from "./Chrono";
 function App() {
   return (
-    <div className="App">
-      <h1>My React App</h1>
+    <div style={{ fontSize: "40px", textAlign: "center" }} className="App">
+      <Chrono />
     </div>
   );
 }
