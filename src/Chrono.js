@@ -17,7 +17,7 @@ export default class Chrono extends Component {
       if (splitSec >= 99) {
         splitSec = 0;
         sec++;
-        if (sec >= 60) {
+        if (sec >= 59) {
           sec = 0;
           min++;
         }
@@ -29,6 +29,10 @@ export default class Chrono extends Component {
 
   stop = () => {
     clearInterval(this.interval);
+  };
+
+  reset = () => {
+    this.setState({ stateSplitSec: 0, stateSec: 0, stateMin: 0 });
   };
   render() {
     return (
